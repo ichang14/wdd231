@@ -1,0 +1,41 @@
+@media only screen and (min-width: 768px) {
+
+    #menu {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+
+    nav {
+        justify-self: end;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+    }
+
+    .navigation li {
+        list-style: none;
+    }
+
+    .navigation a {
+        padding: .8rem 1.2rem;
+        border-radius: 5px;
+    }
+
+    .top {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    #courses {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+}

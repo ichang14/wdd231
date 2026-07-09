@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 | Ilich Chang</title>
+    <meta name="description" content="Home page for WDD231 by Ilich Chang">
+    <meta name="author" content="Ilich Chang">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="Site Logo" width="50" height="50">
+            <span>Ilich Chang</span>
+        </a>
+
+        <button id="menu" aria-label="Open Menu"></button>
+
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber/">Chamber</a></li>
+                <li><a href="final/">Final</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Home</h1>
+
+        <div class="top">
+
+            <section class="card">
+
+                <h2>About Me</h2>
+
+                <p>
+                    Hello! I'm Ilich Chang from Chile. I'm studying Software Development
+                    at BYU-Idaho while working as a Construction Engineer.
+                    I enjoy programming, soccer, and learning new technologies.
+                </p>
+
+            </section>
+
+            <section class="card">
+
+                <h2>Student Photo</h2>
+
+                <img src="images/profile.webp" alt="Ilich Chang" width="300" height="300" loading="lazy">
+
+            </section>
+
+        </div>
+
+        <section class="card">
+
+            <h2>Web & Computer Programming Certificate</h2>
+
+            <div class="buttons">
+
+                <button id="all">All Courses</button>
+
+                <button id="wdd">WDD Courses</button>
+
+                <button id="cse">CSE Courses</button>
+
+            </div>
+
+            <div id="courses"></div>
+
+            <p class="credits">
+                Total Credits:
+                <span id="credits">0</span>
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="social">
+
+            <a href="https://github.com/ichang14/wdd231" target="_blank">
+                <img src="images/github.svg" alt="GitHub" width="40" height="40">
+            </a>
+
+            <a href="https://www.linkedin.com/in/ilich-chang-vasquez-0a2a3b234/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="40" height="40">
+            </a>
+
+            <a href="https://www.facebook.com/ilichjr.chang?locale=es_LA" target="_blank">
+                <img src="images/facebook.svg" alt="Facebook" width="40" height="40">
+            </a>
+
+        </div>
+
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            Ilich Chang | Chile
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+</html>
