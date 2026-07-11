@@ -4,31 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viña del Mar Chamber of Commerce | Directory</title>
+    <title>Viña del Mar Chamber of Commerce | Home</title>
     <meta name="description"
-        content="Business directory for the Viña del Mar Chamber of Commerce, listing local member businesses in Viña del Mar, Chile.">
+        content="Landing page for the Viña del Mar Chamber of Commerce.">
     <meta name="author" content="Ilich Chang">
-    <meta property="og:title" content="Viña del Mar Chamber of Commerce | Directory">
-    <meta property="og:description" content="Browse member businesses of the Viña del Mar Chamber of Commerce.">
-    <meta property="og:image" content="https://ichang14.github.io/wdd231/images/profile.webp">
-    <meta property="og:url" content="https://ichang14.github.io/wdd231/chamber/directory.html">
+
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
 </head>
 
 <body>
 
     <header>
 
-        <a href="/index.html" class="logo">
+        <a href="../index.html" class="logo">
             <img src="images/favicon.svg" alt="Chamber Logo" width="44" height="44">
             <span>Viña del Mar Chamber</span>
         </a>
@@ -37,8 +36,8 @@
 
         <nav>
             <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
             </ul>
         </nav>
 
@@ -46,20 +45,15 @@
 
     <main>
 
-        <h1>Business Directory</h1>
+        <h1>Viña del Mar Chamber of Commerce</h1>
 
-        <div class="directory-controls">
-
-            <p id="member-count"></p>
-
-            <div class="view-toggle">
-                <button id="grid-view" class="active-view" aria-label="Grid view">&#9638;</button>
-                <button id="list-view" aria-label="List view">&#9776;</button>
-            </div>
-
-        </div>
-
-        <div id="directory"></div>
+        <section class="member-card">
+            <h2>Coming in Week 3</h2>
+            <p>
+                This landing page will feature the chamber's hero section, current
+                weather, spotlight members, and upcoming events.
+            </p>
+        </section>
 
     </main>
 
