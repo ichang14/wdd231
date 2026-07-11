@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Hotel Miramar Viña",
+    "address": "Av. San Martín 450, Viña del Mar",
+    "phone": "+56 32 269 1122",
+    "website": "https://www.hotelmiramarvina.example.com",
+    "image": "hotel-miramar.svg",
+    "membership": 3,
+    "category": "Hospedaje",
+    "founded": 1998,
+    "description": "Hotel boutique frente al mar con vista al Castillo Wulff."
+  },
+  {
+    "name": "Café Reñaca Costero",
+    "address": "Av. Borgoño 12500, Viña del Mar",
+    "phone": "+56 32 283 4477",
+    "website": "https://www.cafereñacacostero.example.com",
+    "image": "cafe-renaca.svg",
+    "membership": 2,
+    "category": "Gastronomía",
+    "founded": 2015,
+    "description": "Cafetería especializada en granos de origen chileno."
+  },
+  {
+    "name": "Wave Point Surf School",
+    "address": "Playa Acapulco s/n, Viña del Mar",
+    "phone": "+56 9 8123 4567",
+    "website": "https://www.wavepointsurf.example.com",
+    "image": "wave-point-surf.svg",
+    "membership": 1,
+    "category": "Deportes y Turismo",
+    "founded": 2019,
+    "description": "Clases de surf y arriendo de equipos para todo nivel."
+  },
+  {
+    "name": "Inmobiliaria Vista Pacífico",
+    "address": "Av. Libertad 980, Of. 501, Viña del Mar",
+    "phone": "+56 32 275 6633",
+    "website": "https://www.vistapacifico.example.com",
+    "image": "vista-pacifico.svg",
+    "membership": 3,
+    "category": "Inmobiliaria",
+    "founded": 2005,
+    "description": "Venta y arriendo de propiedades residenciales y comerciales."
+  },
+  {
+    "name": "NovaTec Soluciones Digitales",
+    "address": "Calle Valparaíso 265, Viña del Mar",
+    "phone": "+56 32 250 9911",
+    "website": "https://www.novatecsoluciones.example.com",
+    "image": "novatec.svg",
+    "membership": 2,
+    "category": "Tecnología",
+    "founded": 2020,
+    "description": "Desarrollo de software y consultoría digital para pymes."
+  },
+  {
+    "name": "Panadería El Trigal",
+    "address": "Av. Alvarez 1120, Viña del Mar",
+    "phone": "+56 32 297 3344",
+    "website": "https://www.panaderiaeltrigal.example.com",
+    "image": "panaderia-trigal.svg",
+    "membership": 1,
+    "category": "Gastronomía",
+    "founded": 1987,
+    "description": "Panadería tradicional con más de 35 años en el barrio."
+  },
+  {
+    "name": "Viña Tours & Travel",
+    "address": "Plaza Vergara 220, Viña del Mar",
+    "phone": "+56 32 268 5500",
+    "website": "https://www.vinatoursandtravel.example.com",
+    "image": "vina-tours.svg",
+    "membership": 3,
+    "category": "Turismo",
+    "founded": 2010,
+    "description": "Tours guiados por la Región de Valparaíso y viñedos cercanos."
+  }
+]
