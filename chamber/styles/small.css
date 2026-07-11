@@ -1,11 +1,11 @@
 :root {
     --primary: #003049;
-    --secondary: #669bbc;
+    --secondary: #2e6b8a;
     --accent: #b45309;
     --light: #f8f9fa;
     --dark: #222;
-    --member: #6c757d;
-    --silver: #778da9;
+    --member: #5a6268;
+    --silver: #4a6178;
     --gold: #b45309;
 }
 
@@ -15,8 +15,6 @@ body {
     color: var(--dark);
     line-height: 1.6;
 }
-
-/* Header */
 
 header {
     background: var(--primary);
@@ -78,8 +76,6 @@ header {
     background: var(--accent);
 }
 
-/* Main */
-
 main {
     padding: 1rem;
 }
@@ -123,7 +119,6 @@ h1 {
     color: #fff;
 }
 
-/* Member cards - grid view (default) */
 
 #directory {
     display: grid;
@@ -187,7 +182,6 @@ h1 {
     font-weight: 700;
 }
 
-/* List view */
 
 #directory.list-view {
     grid-template-columns: 1fr;
@@ -200,9 +194,7 @@ h1 {
 }
 
 #directory.list-view .member-card img {
-    width: 56px;
-    height: 56px;
-    flex-shrink: 0;
+    display: none;
 }
 
 #directory.list-view .member-info {
@@ -211,7 +203,6 @@ h1 {
     gap: .15rem;
 }
 
-/* Footer */
 
 footer {
     background: var(--primary);
