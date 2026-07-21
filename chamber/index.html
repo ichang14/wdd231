@@ -5,22 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viña del Mar Chamber of Commerce | Home</title>
-    <meta name="description"
-        content="Landing page for the Viña del Mar Chamber of Commerce.">
+    <meta name="description" content="Official home page of the Viña del Mar Chamber of Commerce,
+         connecting local businesses with the community through networking events, member spotlights, and up-to-date resources for the region.">
     <meta name="author" content="Ilich Chang">
-
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
 </head>
 
 <body>
@@ -31,34 +29,53 @@
             <img src="images/favicon.svg" alt="Chamber Logo" width="44" height="44">
             <span>Viña del Mar Chamber</span>
         </a>
-
         <button id="menu" aria-label="Open Menu"></button>
-
         <nav>
             <ul class="navigation">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main>
-
-        <h1>Viña del Mar Chamber of Commerce</h1>
-
-        <section class="member-card">
-            <h2>Coming in Week 3</h2>
-            <p>
-                This landing page will feature the chamber's hero section, current
-                weather, spotlight members, and upcoming events.
-            </p>
+        <section class="hero">
+            <img src="images/hero.svg" alt="Vista de Viña del Mar" width="1200" height="500" class="hero-image">
+            <div class="hero-content">
+                <h1>Viña del Mar Chamber of Commerce</h1>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+        <section class="events">
+            <h2>Current Events</h2>
+            <article class="event-card card">
+                <h3>Feria de Emprendedores</h3>
+                <p>Agosto 15, 2026 — Plaza Vergara</p>
+            </article>
+            <article class="event-card card">
+                <h3>Networking Nocturno</h3>
+                <p>Septiembre 3, 2026 — Casino Viña del Mar</p>
+            </article>
         </section>
 
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="current-weather">
+                <p id="temp"></p>
+                <p id="weather-description"></p>
+            </div>
+            <div class="forecast" id="forecast">                
+            </div>
+        </section>
+
+        <section class="spotlights">
+            <h2>Company Spotlights</h2>
+            <div class="spotlight-cards" id="spotlight-cards">
+            </div>
+        </section>
     </main>
 
     <footer>
-
         <div class="contact">
             <p>Ilich Chang</p>
             <p>WDD 231</p>
@@ -74,7 +91,6 @@
         <div class="contact">
             <p>&copy; <span id="currentyear"></span> Viña del Mar Chamber of Commerce</p>
         </div>
-
     </footer>
 
 </body>
