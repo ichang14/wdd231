@@ -64,10 +64,11 @@
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 
-}
-.join-container {
-
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
+    .join-container {
+    
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    
+    }
 
 }

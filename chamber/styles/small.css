@@ -413,12 +413,7 @@ footer {
 }
 
 .membership-card {
-
-    height: 100%;
-}
-
-.membership-card {
-background: white;
+    background: white;
     padding: 1.25rem;
     border-radius: 10px;
     text-align: center;
@@ -429,6 +424,7 @@ background: white;
     justify-content: center;
 
     min-height: 220px;
+    height: 100%;
 }
 .membership-card:nth-child(1) {
     border-top: 8px solid #16a34a;
