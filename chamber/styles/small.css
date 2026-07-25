@@ -259,6 +259,7 @@ footer {
     color: var(--accent);
     font-weight: 700;
 }
+
 .directory-controls {
     display: flex;
     justify-content: space-between;
@@ -293,8 +294,9 @@ footer {
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .35);
     transition: transform .25s ease, box-shadow .25s ease;
-    
+
 }
+
 .member-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, .28);
@@ -425,21 +427,29 @@ footer {
 
     min-height: 220px;
     height: 100%;
+
+    opacity: 0;
+    animation: fadeIn .6s ease forwards;
 }
+
 .membership-card:nth-child(1) {
     border-top: 8px solid #16a34a;
+    animation-delay: .1s;
 }
 
 .membership-card:nth-child(2) {
     border-top: 8px solid #b45309;
+    animation-delay: .25s;
 }
 
 .membership-card:nth-child(3) {
     border-top: 8px solid #64748b;
+    animation-delay: .4s;
 }
 
 .membership-card:nth-child(4) {
     border-top: 8px solid #eab308;
+    animation-delay: .55s;
 }
 
 .membership-card h2 {
@@ -555,6 +565,7 @@ dialog button:hover {
 
     font-weight: 600;
 }
+
 .back-button {
 
     display: inline-block;
