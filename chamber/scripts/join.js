@@ -1,13 +1,10 @@
-// Set timestamp
 document.addEventListener("DOMContentLoaded", () => {
-
     const timestamp = document.querySelector("#timestamp");
 
     if (timestamp) {
         timestamp.value = new Date().toISOString();
     }
 
-    // Dialogs
     const dialogs = {
         np: document.querySelector("#npDialog"),
         bronze: document.querySelector("#bronzeDialog"),
@@ -15,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
         gold: document.querySelector("#goldDialog")
     };
 
-    // Open buttons
     document.querySelector("#npBtn").addEventListener("click", () => {
         dialogs.np.showModal();
     });
@@ -32,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         dialogs.gold.showModal();
     });
 
-    // Close buttons
     document.querySelector("#closeNp").addEventListener("click", () => {
         dialogs.np.close();
     });
