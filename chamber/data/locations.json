@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Flower Clock",
+        "address": "Alamos Avenue, Viña del Mar",
+        "description": "One of the city's most famous landmarks featuring a functioning floral clock surrounded by colorful gardens.",
+        "image": "images/flower-clock.webp",
+        "alt": "Flower Clock in Viña del Mar",
+        "learnMore": "https://www.vinadelmarchile.cl/"
+    },
+    {
+        "name": "Wulff Castle",
+        "address": "Marina Avenue, Viña del Mar",
+        "description": "Historic castle built on the rocky coastline offering panoramic views of the Pacific Ocean.",
+        "image": "images/wulff-castle.webp",
+        "alt": "Wulff Castle",
+        "learnMore": "https://www.vinadelmarchile.cl/"
+    },
+    {
+        "name": "Quinta Vergara",
+        "address": "Errázuriz Street, Viña del Mar",
+        "description": "Beautiful park and home of the famous Viña del Mar International Song Festival.",
+        "image": "images/quinta-vergara.webp",
+        "alt": "Quinta Vergara",
+        "learnMore": "https://www.vinadelmarchile.cl/"
+    },
+    {
+        "name": "Reñaca Beach",
+        "address": "Reñaca, Viña del Mar",
+        "description": "Popular beach destination known for surfing, restaurants, and vibrant summer atmosphere.",
+        "image": "images/renaca.webp",
+        "alt": "Reñaca Beach",
+        "learnMore": "https://www.vinadelmarchile.cl/"
+    },
+    {
+        "name": "Fonck Museum",
+        "address": "4 Norte, Viña del Mar",
+        "description": "Museum featuring archaeological collections and the famous Easter Island Moai statue.",
+        "image": "images/fonck.webp",
+        "alt": "Fonck Museum",
+        "learnMore": "https://www.vinadelmarchile.cl/"
+    },
+    {
+        "name": "Palacio Rioja",
+        "address": "Quillota Street, Viña del Mar",
+        "description": "Historic mansion converted into a museum showcasing local history and architecture.",
+        "image": "images/rioja.webp",
+        "alt": "Palacio Rioja",
+        "learnMore": "https://www.vinadelmarchile.cl/"
+    },
+    {
+        "name": "Caleta Abarca",
+        "address": "Avenida España",
+        "description": "Scenic beach located near the Flower Clock with spectacular sunsets.",
+        "image": "images/caleta-abarca.webp",
+        "alt": "Caleta Abarca",
+        "learnMore": "https://www.vinadelmarchile.cl/"
+    },
+    {
+        "name": "Vergara Pier",
+        "address": "San Martín Avenue",
+        "description": "Modern pier ideal for walking, sightseeing, and enjoying the ocean views.",
+        "image": "images/muelle-vergara.webp",
+        "alt": "Vergara Pier",
+        "learnMore": "https://www.vinadelmarchile.cl/"
+    }
+]

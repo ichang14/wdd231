@@ -72,4 +72,33 @@
 
     }
 
+    .discover-grid{
+    grid-template-columns: repeat(2,1fr);
+    }
+
+
+    .discover-card{
+
+    transition:.3s;
+
+    }
+
+    .discover-card:hover{
+
+        transform:translateY(-6px);
+
+        box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    }
+    .discover-card img {
+    
+        transition: .3s;
+    
+    }
+    
+    .discover-card:hover img {
+    
+        transform: scale(1.05);
+    
+    }
 }

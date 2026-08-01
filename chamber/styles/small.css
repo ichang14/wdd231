@@ -589,3 +589,69 @@ dialog button:hover {
     background: var(--accent);
 
 }
+
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.discover-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    display: flex;
+    flex-direction: column;    
+    height: 100%;
+    
+}
+
+.discover-card img {
+    width: 100%;
+    
+    height: 240px;
+    
+    object-fit: cover;
+}
+
+.discover-card section {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+    flex: 1;
+}
+
+.discover-card h2 {
+    color: var(--primary);
+    margin-bottom: .75rem;
+}
+
+.discover-card address {
+    font-style: normal;
+    margin: .75rem 0;
+    color: #555;
+}
+
+.discover-card p {
+    margin-bottom: 1rem;
+}
+
+.discover-card button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: .8rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+#visit-message {
+    background: #eef6ff;
+    border-left: 5px solid var(--secondary);
+    padding: 1rem;
+    margin: 1rem 0 2rem;
+    border-radius: 8px;
+}
