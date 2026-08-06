@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for contacting Oruguitas Deco.">
+    <meta name="author" content="Ilich Chang">
+    <title>Thank You | Oruguitas Deco</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="brand">
+                <img src="images/logo.webp" alt="Oruguitas Deco logo">
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">☰</button>
+            <ul class="nav-menu" id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="customize.html">Customize</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-pressed="false">🌙 Dark mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Thanks for reaching out!</h1>
+            <p>We'll review your message shortly.</p>
+        </section>
+
+        <section class="section container">
+            <h2 class="section-title">Your message summary</h2>
+            <dl id="summaryList">
+                <!-- JS: values read from URL Search Params injected here -->
+            </dl>
+            <a class="btn" href="index.html">Back to home</a>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>Oruguitas Deco</strong> · Personalized gifts · Viña del Mar, Chile</p>
+        <p>&copy; 2026 Oruguitas Deco · Site created by Ilich Chang</p>
+    </footer>
+
+    <script type="module" src="scrips/main.js"></script>
+    <script type="module" src="scrips/thankyou.js"></script>
+</body>
+
+</html>

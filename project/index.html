@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Oruguitas Deco - Personalized gifts in Viña del Mar, Chile. Design t-shirts, hoodies, mugs, frames and more.">
+    <meta name="author" content="Ilich Chang">
+    <title>Oruguitas Deco | Personalized Gifts</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="brand">
+                <img src="images/logo.webp" alt="Oruguitas Deco logo">
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">☰</button>
+            <ul class="nav-menu" id="primaryNav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="customize.html">Customize</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-pressed="false">🌙 Dark mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Gifts that tell your story</h1>
+            <p>Design personalized t-shirts, hoodies, mugs and frames. Preview your design and get a quote in minutes.</p>
+            <a href="customize.html" class="btn btn-accent">Start customizing</a>
+        </section>
+
+        <section class="section container">
+            <h2 class="section-title">Featured products</h2>
+            <div class="card-grid" id="featuredProducts">
+                <!-- JS: featured products injected here from data/products.json -->
+                <p>Loading featured products…</p>
+            </div>
+        </section>
+
+        <section class="section container">
+            <h2 class="section-title">Recently viewed</h2>
+            <div class="card-grid" id="recentlyViewed">
+                <!-- JS: recently viewed products from Local Storage -->
+                <p>You haven't viewed any products yet. <a href="products.html">Browse the catalog</a>.</p>
+            </div>
+        </section>
+
+        <section class="section container">
+            <h2 class="section-title">Our community</h2>
+            <div class="widget-grid">
+
+                <div class="widget" id="weatherWidget">
+                    <h3>Weather in Viña del Mar</h3>
+                    <p>Loading weather…</p>
+                    <!-- JS: OpenWeather API fetch result injected here -->
+                </div>
+
+                <div class="widget" id="statsWidget">
+                    <h3>Oruguitas Deco by the numbers</h3>
+                    <p>+250 happy customers</p>
+                    <p>15 customizable products</p>
+                    <p>Shipping across the Valparaíso Region</p>
+                </div>
+
+                <div class="widget" id="testimonialsWidget">
+                    <h3>Testimonials</h3>
+                    <blockquote>“I loved my hoodie, it arrived right on time.” — Customer</blockquote>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>Oruguitas Deco</strong> · Personalized gifts · Viña del Mar, Chile</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/oruguitas_deco/" target="_blank" rel="noopener">Instagram</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2026 Oruguitas Deco · Site created by Ilich Chang</p>
+    </footer>
+
+    <script type="module" src="scrips/main.js"></script>
+</body>
+
+</html>

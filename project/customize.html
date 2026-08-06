@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customize your Oruguitas Deco gift: color, size, text and live preview.">
+    <meta name="author" content="Ilich Chang">
+    <title>Customize Product | Oruguitas Deco</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/styles.css">
+    
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="brand">
+                <img src="images/logo.webp" alt="Oruguitas Deco logo">
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">☰</button>
+            <ul class="nav-menu" id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="customize.html" class="active">Customize</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-pressed="false">🌙 Dark mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Customize your gift</h1>
+            <p>Choose the product, adjust color, size and text, and see the result before requesting a quote.</p>
+        </section>
+
+        <section class="section container customize-layout">
+
+            <div class="customize-controls">
+
+                <div class="form-field">
+                    <label for="productSelect">Product</label>
+                    <select id="productSelect">
+                        <!-- JS: options injected from data/products.json -->
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="colorSelect">Color</label>
+                    <select id="colorSelect">
+                        <!-- JS: options depend on selected product -->
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="sizeSelect">Size</label>
+                    <select id="sizeSelect">
+                        <!-- JS: options depend on selected product -->
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="customText">Custom text</label>
+                    <input type="text" id="customText" maxlength="40" placeholder="e.g. Happy Birthday Sofia">
+                </div>
+
+                <div class="form-field">
+                    <label for="fontSelect">Text font</label>
+                    <select id="fontSelect">
+                        <option value="Poppins">Poppins</option>
+                        <option value="Open Sans">Open Sans</option>
+                        <option value="cursive">Script</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="logoUpload">Upload logo/photo (optional)</label>
+                    <input type="file" id="logoUpload" accept="image/*">
+                </div>
+
+                <p class="estimated-price">Estimated price: <span id="estimatedPrice">—</span></p>
+
+                <div class="card-actions">
+                    <button class="btn" id="addToCartBtn" type="button">Add to cart</button>
+                    <button class="btn btn-accent" id="requestQuoteBtn" type="button">Request quote on WhatsApp</button>
+                </div>
+
+            </div>
+
+            <div class="customize-preview">
+                <h2 class="section-title">Live preview</h2>
+                <div class="preview-frame" id="previewFrame">
+                    <!-- JS: live preview (base image + overlay text) injected here -->
+                    <p>Select a product to see the live preview.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>Oruguitas Deco</strong> · Personalized gifts · Viña del Mar, Chile</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/oruguitas_deco/" target="_blank" rel="noopener">Instagram</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2026 Oruguitas Deco · Site created by Ilich Chang</p>
+    </footer>
+
+    <script type="module" src="scrips/main.js"></script>
+    <script type="module" src="scrips/customize.js"></script>
+</body>
+
+</html>

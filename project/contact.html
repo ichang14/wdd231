@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Oruguitas Deco: form, WhatsApp and location in Viña del Mar.">
+    <meta name="author" content="Ilich Chang">
+    <title>Contact | Oruguitas Deco</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="brand">
+                <img src="images/logo.webp" alt="Oruguitas Deco logo">
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">☰</button>
+            <ul class="nav-menu" id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="customize.html">Customize</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-pressed="false">🌙 Dark mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Let's talk about your gift</h1>
+            <p>Write to us through the form, WhatsApp, or visit us in Viña del Mar.</p>
+        </section>
+
+        <section class="section container contact-layout">
+
+            <form id="contactForm" action="thankyou.html" method="get">
+
+                <div class="form-field">
+                    <label for="nameInput">Name</label>
+                    <input type="text" id="nameInput" name="name" required minlength="2">
+                    <span class="error-msg" id="nameError"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="emailInput">Email</label>
+                    <input type="email" id="emailInput" name="email" required>
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="phoneInput">Phone</label>
+                    <input type="tel" id="phoneInput" name="phone" placeholder="+56 9 1234 5678">
+                    <span class="error-msg" id="phoneError"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="productTypeInput">Product of interest</label>
+                    <select id="productTypeInput" name="productType">
+                        <option value="tshirt">T-shirt</option>
+                        <option value="hoodie">Hoodie</option>
+                        <option value="mug">Mug</option>
+                        <option value="frame">Frame</option>
+                        <option value="hat">Hat</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="messageInput">Message</label>
+                    <textarea id="messageInput" name="message" rows="4" required minlength="10"></textarea>
+                    <span class="error-msg" id="messageError"></span>
+                </div>
+
+                <button class="btn" type="submit">Send message</button>
+            </form>
+
+            <div class="contact-info">
+
+                <div class="widget">
+                    <h2>Message us on WhatsApp</h2>
+                    <a class="btn btn-accent" id="whatsappBtn" href="#" target="_blank" rel="noopener">Open WhatsApp</a>
+                </div>
+
+                <div class="widget">
+                    <h2>Location</h2>
+                    <div id="mapEmbed">
+                        <!-- Google Maps Embed goes here -->
+                        <p>Viña del Mar, Valparaíso Region, Chile</p>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <h2>Social media</h2>
+                    <a href="https://www.instagram.com/oruguitas_deco/" target="_blank" rel="noopener">@oruguitas_deco on Instagram</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>Oruguitas Deco</strong> · Personalized gifts · Viña del Mar, Chile</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/oruguitas_deco/" target="_blank" rel="noopener">Instagram</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2026 Oruguitas Deco · Site created by Ilich Chang</p>
+    </footer>
+
+    <script type="module" src="scrips/main.js"></script>
+    <script type="module" src="scrips/contact.js"></script>
+</body>
+
+</html>

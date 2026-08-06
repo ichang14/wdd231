@@ -1,0 +1,512 @@
+/* ============================================
+   Oruguitas Deco — Design tokens
+   ============================================ */
+:root {
+    --color-primary: #7B5BFF;
+    --color-primary-dark: #5f3fe0;
+    --color-accent: #F48FB1;
+    --color-white: #FFFFFF;
+    --color-text: #333333;
+    --color-bg-soft: #F5F5F5;
+
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    --radius: 10px;
+    --shadow-card: 0 4px 14px rgba(123, 91, 255, 0.12);
+    --max-width: 1100px;
+}
+
+/* Dark theme override (toggled via data-theme on <html>) */
+[data-theme="dark"] {
+    --color-white: #1E1B29;
+    --color-bg-soft: #262233;
+    --color-text: #EDEAF6;
+}
+
+/* ============================================
+   Base
+   ============================================ */
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    line-height: 1.25;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.btn {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover, .btn:focus-visible {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   Header / Navigation
+   ============================================ */
+.site-header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-white);
+}
+
+.brand img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-toggle {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 1.75rem;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    display: block;
+}
+
+.nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    flex-direction: column;
+    display: none;
+}
+
+.nav-menu.is-open {
+    display: flex;
+}
+
+.nav-menu a {
+    color: var(--color-white);
+    padding: 0.9rem 1.25rem;
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+.nav-menu a.active {
+    background-color: var(--color-primary-dark);
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: var(--color-white);
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Hero
+   ============================================ */
+.hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    color: var(--color-white);
+    padding: 3rem 1.25rem;
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.hero p {
+    max-width: 40ch;
+    margin: 0 auto 1.5rem;
+    font-size: 1.05rem;
+}
+
+/* ============================================
+   Sections / Cards
+   ============================================ */
+.section {
+    padding: 2.5rem 0;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.card {
+    background-color: var(--color-bg-soft);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    font-size: 1.05rem;
+}
+
+.card-price {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.card-actions .btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.icon-btn {
+    background: none;
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius);
+    padding: 0.5rem 0.7rem;
+    color: var(--color-primary);
+}
+
+/* ============================================
+   Customize page
+   ============================================ */
+.customize-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.estimated-price {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+.preview-frame {
+    background-color: var(--color-bg-soft);
+    border-radius: var(--radius);
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.preview-frame img {
+    max-height: 320px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.preview-text-overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    max-width: 80%;
+}
+
+@media (min-width: 900px) {
+    .customize-layout {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+/* ============================================
+   Widgets: weather / stats / testimonials
+   ============================================ */
+.widget-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.widget {
+    background-color: var(--color-bg-soft);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    text-align: center;
+}
+
+/* ============================================
+   Filter bar (Products page)
+   ============================================ */
+.filter-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--color-bg-soft);
+    padding: 1.25rem;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 700px) {
+    .filter-bar {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .filter-bar .form-field {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+/* ============================================
+   Forms
+   ============================================ */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1.1rem;
+}
+
+.form-field label {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #cfcfcf;
+    border-radius: var(--radius);
+    background-color: var(--color-white);
+    color: var(--color-text);
+}
+
+.form-field .error-msg {
+    color: #c0392b;
+    font-size: 0.85rem;
+    min-height: 1.1em;
+}
+
+/* ============================================
+   Contact page
+   ============================================ */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#summaryList {
+    background-color: var(--color-bg-soft);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+#summaryList dt {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 0.75rem;
+}
+
+#summaryList dt:first-child {
+    margin-top: 0;
+}
+
+@media (min-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+/* ============================================
+   Modal
+   ============================================ */
+.modal {
+    border: none;
+    border-radius: var(--radius);
+    padding: 0;
+    max-width: 90vw;
+    width: 420px;
+}
+
+.modal::backdrop {
+    background: rgba(51, 51, 51, 0.6);
+}
+
+.modal-inner {
+    padding: 1.5rem;
+}
+
+.modal-close {
+    float: right;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--color-text);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.site-footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 2rem 1.25rem;
+}
+
+.site-footer a {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+/* ============================================
+   Utility
+   ============================================ */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* ============================================
+   Larger screens
+   ============================================ */
+@media (min-width: 700px) {
+    .nav-toggle { display: none; }
+
+    .nav-menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background: none;
+    }
+
+    .nav-menu a {
+        border-top: none;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius);
+    }
+
+    .nav-menu a.active {
+        background-color: var(--color-primary-dark);
+    }
+
+    .hero h1 { font-size: 2.75rem; }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .widget-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
