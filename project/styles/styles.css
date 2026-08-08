@@ -1,4 +1,6 @@
-
+/* ============================================
+   Oruguitas Deco — Design tokens
+   ============================================ */
 :root {
     --color-primary: #7B5BFF;
     --color-primary-dark: #5f3fe0;
@@ -15,12 +17,16 @@
     --max-width: 1100px;
 }
 
+/* Dark theme override (toggled via data-theme on <html>) */
 [data-theme="dark"] {
     --color-white: #1E1B29;
     --color-bg-soft: #262233;
     --color-text: #EDEAF6;
 }
 
+/* ============================================
+   Base
+   ============================================ */
 body {
     font-family: var(--font-body);
     color: var(--color-text);
@@ -67,6 +73,9 @@ h1, h2, h3, h4 {
     outline-offset: 2px;
 }
 
+/* ============================================
+   Header / Navigation
+   ============================================ */
 .site-header {
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -145,7 +154,9 @@ h1, h2, h3, h4 {
     font-size: 0.9rem;
 }
 
-
+/* ============================================
+   Hero
+   ============================================ */
 .hero {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
     color: var(--color-white);
@@ -165,7 +176,9 @@ h1, h2, h3, h4 {
     font-size: 1.05rem;
 }
 
-
+/* ============================================
+   Sections / Cards
+   ============================================ */
 .section {
     padding: 2.5rem 0;
 }
@@ -236,7 +249,9 @@ h1, h2, h3, h4 {
     color: var(--color-primary);
 }
 
-
+/* ============================================
+   Customize page
+   ============================================ */
 .customize-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -283,6 +298,9 @@ h1, h2, h3, h4 {
     }
 }
 
+/* ============================================
+   Widgets: weather / stats / testimonials
+   ============================================ */
 .widget-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -296,6 +314,9 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
+/* ============================================
+   Filter bar (Products page)
+   ============================================ */
 .filter-bar {
     display: flex;
     flex-direction: column;
@@ -318,7 +339,9 @@ h1, h2, h3, h4 {
     }
 }
 
-
+/* ============================================
+   Forms
+   ============================================ */
 .form-field {
     display: flex;
     flex-direction: column;
@@ -348,7 +371,9 @@ h1, h2, h3, h4 {
     min-height: 1.1em;
 }
 
-
+/* ============================================
+   Contact page
+   ============================================ */
 .contact-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -385,7 +410,9 @@ h1, h2, h3, h4 {
     }
 }
 
-
+/* ============================================
+   Modal
+   ============================================ */
 .modal {
     border: none;
     border-radius: var(--radius);
@@ -410,7 +437,9 @@ h1, h2, h3, h4 {
     color: var(--color-text);
 }
 
-
+/* ============================================
+   Footer
+   ============================================ */
 .site-footer {
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -430,7 +459,9 @@ h1, h2, h3, h4 {
     margin: 1rem 0;
 }
 
-
+/* ============================================
+   Utility
+   ============================================ */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -440,7 +471,9 @@ h1, h2, h3, h4 {
     white-space: nowrap;
 }
 
-
+/* ============================================
+   Larger screens
+   ============================================ */
 @media (min-width: 700px) {
     .nav-toggle { display: none; }
 
