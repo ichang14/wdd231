@@ -1,7 +1,3 @@
-// customize.js
-// Customize Product page: product/color/size/text/font selection
-// and a live preview with an estimated price.
-
 const PRODUCTS_URL = 'data/products.json';
 
 const productSelect = document.getElementById('productSelect');
@@ -38,7 +34,6 @@ function selectProduct(id) {
     currentProduct = allProducts.find(p => p.id === id);
     if (!currentProduct) return;
 
-    // TODO: repopulate colorSelect / sizeSelect options from currentProduct.colors / .sizes
     colorSelect.innerHTML = currentProduct.colors.map(c => `<option value="${c}">${c}</option>`).join('');
     sizeSelect.innerHTML = (currentProduct.sizes.length ? currentProduct.sizes : ['One size']).map(s => `<option value="${s}">${s}</option>`).join('');
 
@@ -48,7 +43,6 @@ function selectProduct(id) {
 function updatePreview() {
     if (!currentProduct) return;
 
-    // TODO: overlay customText (with fontSelect) on top of currentProduct.image inside previewFrame
     previewFrame.innerHTML = `
         <img src="${currentProduct.image}" alt="Preview of ${currentProduct.name}">
         <div class="preview-text-overlay" style="font-family:${fontSelect.value}">${customText.value}</div>
@@ -61,8 +55,5 @@ if (productSelect) productSelect.addEventListener('change', (e) => selectProduct
 [colorSelect, sizeSelect, customText, fontSelect].forEach(el => {
     if (el) el.addEventListener('input', updatePreview);
 });
-
-// TODO: addToCartBtn -> save current configuration to Local Storage cart
-// TODO: requestQuoteBtn -> build WhatsApp Click-to-Chat link with product + customization summary
 
 loadProducts();

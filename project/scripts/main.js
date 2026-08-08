@@ -1,5 +1,3 @@
-// main.js
-// Shared functionality across all pages: responsive nav menu and light/dark theme.
 
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.getElementById('primaryNav');
@@ -34,7 +32,58 @@ if (themeToggle) {
     });
 }
 
-// TODO (Home only): fetch data/products.json for featured products + recently viewed
-// TODO (Home only): fetch OpenWeather API for #weatherWidget (Viña del Mar)
+const PRODUCTS_URL = 'data/products.json';
+const RECENT_KEY = 'oruguitas-recently-viewed';
+
+const featuredGrid = document.getElementById('featuredProducts');
+const recentGrid = document.getElementById('recentlyViewed');
+
+function homeCardTemplate(product) {
+    return `
+        <article class="card" data-id="${product.id}">
+            <img src="${product.image}" alt="${product.name}" loading="lazy">
+            <div class="card-body">
+                <h3>${product.name}</h3>
+                <p class="card-price">$${product.price.toLocaleString('en-US')}</p>
+                <div class="card-actions">
+                    <a class="btn" href="products.html">View in catalog</a>
+                </div>
+            </div>
+        </article>
+    `;
+}
+
+async function loadHomeSections() {
+    if (!featuredGrid && !recentGrid) return;
+
+    try {
+        const response = await fetch(PRODUCTS_URL);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const allProducts = await response.json();
+
+        if (featuredGrid) {
+            const featured = allProducts.filter(product => product.featured);
+            featuredGrid.innerHTML = featured.length
+                ? featured.map(homeCardTemplate).join('')
+                : '<p>No featured products yet.</p>';
+        }
+
+        if (recentGrid) {
+            const recentIds = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]');
+            const recentProducts = recentIds
+                .map(id => allProducts.find(product => product.id === id))
+                .filter(Boolean);
+
+            recentGrid.innerHTML = recentProducts.length
+                ? recentProducts.map(homeCardTemplate).join('')
+                : `<p>You haven't viewed any products yet. <a href="products.html">Browse the catalog</a>.</p>`;
+        }
+    } catch (error) {
+        if (featuredGrid) featuredGrid.innerHTML = '<p>We couldn\'t load featured products.</p>';
+        console.error('Error loading products.json on Home:', error);
+    }
+}
+
+loadHomeSections();
 
 export { applyTheme };

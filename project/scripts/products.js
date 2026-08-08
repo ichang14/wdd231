@@ -1,10 +1,8 @@
-// products.js
-// Products page: dynamic catalog from data/products.json + search,
-// category filters, favorites, cart (Local Storage) and detail modal.
 
 const PRODUCTS_URL = 'data/products.json';
 const FAVORITES_KEY = 'oruguitas-favorites';
 const CART_KEY = 'oruguitas-cart';
+const RECENT_KEY = 'oruguitas-recently-viewed';
 
 const productGrid = document.getElementById('productGrid');
 const resultsCount = document.getElementById('resultsCount');
@@ -18,8 +16,6 @@ const cartList = document.getElementById('cartList');
 const cartTotal = document.getElementById('cartTotal');
 
 let allProducts = [];
-
-/* ---------- Local Storage helpers ---------- */
 
 function getFavorites() {
     return JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]');
@@ -58,7 +54,13 @@ function removeFromCart(id) {
     renderCart();
 }
 
-/* ---------- Load & render products ---------- */
+function trackRecentlyViewed(id) {
+    let recent = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]');
+    recent = recent.filter(existingId => existingId !== id);
+    recent.unshift(id);
+    recent = recent.slice(0, 8);
+    localStorage.setItem(RECENT_KEY, JSON.stringify(recent));
+}
 
 async function loadProducts() {
     try {
@@ -100,8 +102,6 @@ function cardTemplate(product, isFavorite) {
     `;
 }
 
-/* ---------- Filtering ---------- */
-
 function filterProducts() {
     const term = searchInput.value.trim().toLowerCase();
     const category = categorySelect.value;
@@ -127,8 +127,6 @@ searchInput.addEventListener('input', filterProducts);
 categorySelect.addEventListener('change', filterProducts);
 favoritesOnly.addEventListener('change', filterProducts);
 
-/* ---------- Card button clicks (event delegation) ---------- */
-
 productGrid.addEventListener('click', (event) => {
     const button = event.target.closest('button[data-action]');
     if (!button) return;
@@ -145,11 +143,11 @@ productGrid.addEventListener('click', (event) => {
     }
 });
 
-/* ---------- Modal ---------- */
-
 function openProductModal(id) {
     const product = allProducts.find(p => p.id === id);
     if (!product) return;
+
+    trackRecentlyViewed(id);
 
     productModalContent.innerHTML = `
         <button class="modal-close" id="closeModal" aria-label="Close">&times;</button>
@@ -168,7 +166,6 @@ function openProductModal(id) {
 
     productModal.showModal();
 
-    // Re-bind close button (it was replaced by innerHTML above)
     document.getElementById('closeModal').addEventListener('click', () => productModal.close());
     document.getElementById('modalAddToCart').addEventListener('click', () => {
         addToCart(product.id);
@@ -178,11 +175,9 @@ function openProductModal(id) {
 
 closeModal.addEventListener('click', () => productModal.close());
 productModal.addEventListener('click', (event) => {
-    // Close when clicking the ::backdrop (outside modal-inner)
     if (event.target === productModal) productModal.close();
 });
 
-/* ---------- Cart ---------- */
 
 function renderCart() {
     const cart = getCart();
@@ -216,6 +211,5 @@ cartList.addEventListener('click', (event) => {
     removeFromCart(button.dataset.remove);
 });
 
-/* ---------- Init ---------- */
 
 loadProducts().then(renderCart);
