@@ -1,116 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Oruguitas Deco | Personalized Gifts</title>
-
+    <title>Oruguitas Deco | Regalos Personalizados</title>
     <meta name="description"
-        content="Oruguitas Deco creates personalized gifts in Viña del Mar, including t-shirts, hoodies, mugs, notebooks and custom decorations.">
-
+        content="Oruguitas Deco crea regalos personalizados como poleras, polerones, agendas, tazones, cuadros y artículos corporativos.">
     <meta name="author" content="Ilich Chang">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/logo_oruguitas.png" type="image/png">
 
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta property="og:title" content="Oruguitas Deco | Personalized Gifts in Viña del Mar">
+    <meta property="og:title" content="Oruguitas Deco | Personalized Gifts for Every Occasion">
     <meta property="og:description"
-        content="Create personalized gifts including mugs, hoodies, t-shirts, notebooks and custom decorations for every occasion.">
-<meta property="og:image" content="https://ichang14.github.io/wdd131/project/images/logo.webp">
-<meta property="og:url" content="https://ichang14.github.io/wdd131/project/index.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
+        content="Oruguitas Deco creates personalized gifts in Chile: custom t-shirts, hoodies, mugs, frames and corporate items made with care.">
+    <meta property="og:image" content="https://ichang14.github.io/wdd131/project/images/logo_oruguitas.png">
+    <meta property="og:url" content="https://ichang14.github.io/wdd131/project/index.html">
 </head>
-<body>
 
-    <header class="site-header">
-        <nav class="nav-bar">
-            <a href="index.html" class="brand">
-                <img src="images/logo.webp" alt="Oruguitas Deco logo">
-            </a>
-            <button class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">☰</button>
-            <ul class="nav-menu" id="primaryNav">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="customize.html">Customize</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button class="theme-toggle" id="themeToggle" aria-pressed="false">🌙 Dark mode</button></li>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo_oruguitas.png" alt="Logo Oruguitas Deco" class="logo">
+            <h1>Oruguitas Deco</h1>
+        </div>
+        <button id="menu-button" aria-label="Abrir menú">
+            ☰
+        </button>
+        <nav id="navigation">
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="references.html">References</a>
             </ul>
         </nav>
     </header>
-
     <main>
-
         <section class="hero">
-            <h1>Gifts that tell your story</h1>
-            <p>Design personalized t-shirts, hoodies, mugs and frames. Preview your design and get a quote in minutes.</p>
-            <a href="customize.html" class="btn btn-accent">Start customizing</a>
-        </section>
-
-        <section class="section container">
-            <h2 class="section-title">Featured products</h2>
-            <div class="card-grid" id="featuredProducts">
-                <p>Loading featured products…</p>
+            <div class="hero-text">
+                <h2>Personalized Gifts for Special Moments</h2>
+                <p>
+                    We create unique products specially designed for each customer.
+                    From custom apparel to corporate gifts, every item is made with care and attention to detail.
+                </p>
+                <a href="products.html" class="btn">
+                    View Products
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="images/agenda.jpeg" alt="Agenda personalizada" loading="lazy">
             </div>
         </section>
-
-        <section class="section container">
-            <h2 class="section-title">Recently viewed</h2>
-            <div class="card-grid" id="recentlyViewed">
-                 <p>You haven't viewed any products yet. <a href="products.html">Browse the catalog</a>.</p>
+        <section class="about">
+            <h2>Who We Are</h2>
+            <p>
+                Oruguitas Deco is a small business dedicated to creating personalized gifts for individuals, families,
+                businesses,
+                and organizations.
+                Our goal is to transform ideas into meaningful products that create lasting memories.
+            </p>
+        </section>
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="featured-grid">
+                <article class="card">
+                    <img src="images/polera1.png" alt="Polera personalizada" loading="lazy">
+                    <h3>Custom T-Shirts</h3>
+                    <p>
+                        Unique designs for events, organizations, and special occasions.
+                    </p>
+                </article>
+                <article class="card">
+                    <img src="images/poleron1.png" alt="Polerón personalizado" loading="lazy">
+                    <h3>Custom Hoodies</h3>
+                    <p>
+                        High-quality personalized hoodies for teams and groups.
+                    </p>
+                </article>
+                <article class="card">
+                    <img src="images/taza.jpeg" alt="Tazón personalizado" loading="lazy">
+                    <h3>Custom Mugs</h3>
+                    <p>
+                        Special gifts designed to make every moment memorable.
+                    </p>
+                </article>
             </div>
         </section>
-
-        <section class="section container">
-            <h2 class="section-title">Our community</h2>
-            <div class="widget-grid">
-                
-                <div class="widget" id="statsWidget">
-                    <h3>Oruguitas Deco by the numbers</h3>
-                    <p>+250 happy customers</p>
-                    <p>15 customizable products</p>
-                    <p>Shipping across the Valparaíso Region</p>
+        <section class="stats">
+            <h2>Our Products</h2>
+            <div id="stats-container">
+                <div class="stat-box">
+                    <h3 id="product-count">0</h3>
+                    <p>Available Products</p>
                 </div>
-
-               
-                <div class="widget" id="testimonialsWidget">
-                    <h3>Testimonials</h3>
-                    <blockquote>"I loved my hoodie, it arrived right on time." — Customer</blockquote>
+                <div class="stat-box">
+                    <h3 id="favorite-count">0</h3>
+                    <p>Saved Favorites</p>
                 </div>
-                
-                <div class="widget" id="comingSoonWidget">
-                    <h3>Coming Soon...</h3>
-                    <p>More products and customer stories will be available soon.</p>
-                </div>
-
-
+            </div>
         </section>
-
-    </main>
-
-    <footer class="site-footer">
-        <p><strong>Oruguitas Deco</strong> · Personalized gifts · Viña del Mar, Chile</p>
-    
-        <div class="footer-social">
-            <a href="https://www.instagram.com/oruguitas_deco/" target="_blank" rel="noopener">
-                Instagram
+        <section class="instagram">
+            <h2>Follow Us on Instagram</h2>
+            <p>
+                Discover our latest projects, custom products, and special promotions.
+            </p>
+            <a href="https://www.instagram.com/oruguitas_deco/" target="_blank" class="btn">
+                @oruguitas_deco
             </a>
-            <a href="contact.html">Contact</a>
-        </div>
-    
-        <p>&copy; 2026 Oruguitas Deco · Site created by Ilich Chang</p>
+        </section>
+    </main>
+    <footer>
+        <p>
+            © 2026 Oruguitas Deco
+        </p>
+        <p>
+            <a href="references.html">Referencias</a>
+        </p>
+        <p>
+            ⚽ Ilich Chang ⚽
+        </p>
     </footer>
-    
+
     <script type="module" src="scripts/main.js"></script>
-     
-    </body>
-    
-    </html>
+</body>
+
+</html>
