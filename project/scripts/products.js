@@ -1,6 +1,3 @@
-// products.js
-// Products page: dynamic catalog from data/products.json + search,
-// category filters, favorites, cart (Local Storage) and detail modal.
 
 const PRODUCTS_URL = 'data/products.json';
 const FAVORITES_KEY = 'oruguitas-favorites';
@@ -19,7 +16,6 @@ const cartTotal = document.getElementById('cartTotal');
 
 let allProducts = [];
 
-/* ---------- Local Storage helpers ---------- */
 
 function getFavorites() {
     return JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]');
@@ -58,7 +54,6 @@ function removeFromCart(id) {
     renderCart();
 }
 
-/* ---------- Load & render products ---------- */
 
 async function loadProducts() {
     try {
@@ -100,7 +95,6 @@ function cardTemplate(product, isFavorite) {
     `;
 }
 
-/* ---------- Filtering ---------- */
 
 function filterProducts() {
     const term = searchInput.value.trim().toLowerCase();
@@ -127,7 +121,6 @@ searchInput.addEventListener('input', filterProducts);
 categorySelect.addEventListener('change', filterProducts);
 favoritesOnly.addEventListener('change', filterProducts);
 
-/* ---------- Card button clicks (event delegation) ---------- */
 
 productGrid.addEventListener('click', (event) => {
     const button = event.target.closest('button[data-action]');
@@ -145,7 +138,6 @@ productGrid.addEventListener('click', (event) => {
     }
 });
 
-/* ---------- Modal ---------- */
 
 function openProductModal(id) {
     const product = allProducts.find(p => p.id === id);
@@ -168,7 +160,6 @@ function openProductModal(id) {
 
     productModal.showModal();
 
-    // Re-bind close button (it was replaced by innerHTML above)
     document.getElementById('closeModal').addEventListener('click', () => productModal.close());
     document.getElementById('modalAddToCart').addEventListener('click', () => {
         addToCart(product.id);
@@ -178,11 +169,9 @@ function openProductModal(id) {
 
 closeModal.addEventListener('click', () => productModal.close());
 productModal.addEventListener('click', (event) => {
-    // Close when clicking the ::backdrop (outside modal-inner)
     if (event.target === productModal) productModal.close();
 });
 
-/* ---------- Cart ---------- */
 
 function renderCart() {
     const cart = getCart();
@@ -216,6 +205,5 @@ cartList.addEventListener('click', (event) => {
     removeFromCart(button.dataset.remove);
 });
 
-/* ---------- Init ---------- */
 
 loadProducts().then(renderCart);

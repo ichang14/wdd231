@@ -1,5 +1,3 @@
-// main.js
-// Shared functionality across all pages: responsive nav menu and light/dark theme.
 
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.getElementById('primaryNav');
@@ -33,8 +31,5 @@ if (themeToggle) {
         applyTheme(next);
     });
 }
-
-// TODO (Home only): fetch data/products.json for featured products + recently viewed
-// TODO (Home only): fetch OpenWeather API for #weatherWidget (Viña del Mar)
 
 export { applyTheme };

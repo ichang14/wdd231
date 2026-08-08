@@ -1,7 +1,3 @@
-// thankyou.js
-// Reads the data submitted from contact.html via URL Search Params and displays it.
-// Fulfills the "Form Action Page" rubric requirement.
-
 const summaryList = document.getElementById('summaryList');
 const params = new URLSearchParams(window.location.search);
 
